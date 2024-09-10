@@ -1,50 +1,46 @@
 from subpastasbombas.BombaEtanol import Etanol
 from subpastasbombas.BombaGasolina import Gasolina
+from Carrinho.por_l_ou_v import PorLitroOuValor
 
-print("Olá Somos o Samunipe")
+print("Olá, somos o Samunipe")
 
-print()
-
-
-valor_litro = input('''Oque você deseja?
+valor = input('''O que você deseja?
 [1]. Abastecer Etanol - 3 R$
 [2]. Abastecer Gasolina - 5 R$
-[3]. Abastecer Gasolina Com Aditivo
-Digite sua resposta:''')
+[3]. Abastecer Gasolina com Aditivo
+Digite sua resposta: ''')
 
-test = input('''Você deseja abatecer por?
-[1]. Valor
-[2]. Litro
-Digite sua resposta:''')
+test = input('''Você deseja abastecer por?
+[1]. Litro
+[2]. Valor
+Digite sua resposta: ''')
 
-test3 = input("Digite a quantia de ")
+if test == '1':
+    valor_combustivel = 3
+elif test == '2':
+    valor_combustivel = 5
+elif test == '3':
+    valor_combustivel = 5 
+else:
+    print("Opção inválida")
 
 
 
-if valor_litro == "1":
-        Etanol.bomba_etanol()
-elif valor_litro == "2":
-        Gasolina.gasolina_comum()
-if valor_litro == "1":
-        Gasolina.gasolina_com_aditivo()
+if valor == '1':
+    Etanol.bomba_etanol()
+elif valor == '2':
+    Gasolina.gasolina_comum()
+elif valor == '3':
+    Gasolina.gasolina_com_aditivo()
+
+abastecimento = PorLitroOuValor(valor_combustivel)
 
 if test == "1":
-    def abastecer_por_valor(valor):
-        valor = 
-        print()
+    abastecimento.por_litro()
 elif test == "2":
-    def abastecer_por_litro(litros):
-        print()
+    abastecimento.por_valor()
+else:
+    print("Opção inválida")
+    exit()
 
-
-
-
-
-    
-
-quantidade_disponivel = input("Quantidade Presente Na Bomba de Combustível")
-
-
-
-    
 

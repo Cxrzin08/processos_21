@@ -5,7 +5,6 @@ class Gasolina:
 
 
     def gasolina_comum():
-      test2 = 5 * 
       print()
 
     def gasolina_com_aditivo():
