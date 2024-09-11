@@ -26,7 +26,7 @@ class PorLitroOuValor:
             por_valor = float(input("Digite o valor em reais que deseja abastecer: "))
             resultado = por_valor / self.valor
             if resultado + self.litros > self.capacidade_maxima:
-                print(f"Não é possível abastecer R${por_valor} de combustível. Seu tanque só pode comportar {self.capacidade_maxima - self.litros:.2f} litros.")
+                print(f"Não é possível abastecer R${por_valor} de combustível. Seu tanque só pode comportar {self.capacidade_maxima - self.litros:.2f} litros. quantia atual {self.litros}")
                 return
             self.litros += resultado 
             quantidade_disponivel = f"A capacidade do seu tanque é de 100 litros no total. Quantia atual do seu tanque: {self.litros:.2f} litros"

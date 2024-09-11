@@ -2,9 +2,8 @@ from subpastasbombas.BombaEtanol import Etanol
 from subpastasbombas.BombaGasolina import Gasolina
 from Carrinho.por_l_ou_v import PorLitroOuValor
 
-# Loop principal
 while True:
-    print(f"Olá, somos o Samunipe")
+    print("Olá, somos o Samunipe")
 
     valor = input('''O que você deseja?
 [1]. Abastecer Etanol - 3 R$
@@ -18,23 +17,21 @@ Digite sua resposta: ''')
 Digite sua resposta: ''')
 
     if valor == '1':
-        abastecimento_combustivel = Etanol()  # Abastecer Etanol
+        abastecimento_combustivel = Etanol()
     elif valor == '2':
-        abastecimento_combustivel = Gasolina(tipo='comum')  # Gasolina comum
+        abastecimento_combustivel = Gasolina(tipo='comum')
     elif valor == '3':
-        abastecimento_combustivel = Gasolina(tipo='aditivo')  # Gasolina aditivada
+        abastecimento_combustivel = Gasolina(tipo='aditivo')
     else:
         print("Opção inválida. Tente novamente.")
         continue
 
-    # Criação do objeto PorLitroOuValor com o valor do combustível
     abastecimento = PorLitroOuValor(abastecimento_combustivel.preco)
 
-    # Escolha de abastecimento por litro ou valor
     if metodo_abastecimento == "1":
         abastecimento.por_litro()
     elif metodo_abastecimento == "2":
         abastecimento.por_valor()
     else:
-        print("Opção inválida. Saindo...")
-        exit()
+        print("Opção inválida. Tente novamente.")
+        continue
